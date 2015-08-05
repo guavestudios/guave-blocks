@@ -1,0 +1,52 @@
+body {
+  .font-normal(@font-size-normal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: @link-color;
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: @link-hover-color;
+  }
+}
+
+p,
+ul,
+ol {
+  line-height: 1.5;
+}
+
+
+h1 {
+  .font-normal(@font-sizes-h1);
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+
+  .responsive(@min-width-tablet, {
+    line-height: 1.5;
+  } );
+
+  .responsive(@min-width-desktop, {
+    line-height: 1.25;
+    margin-bottom: 5rem;
+  } );
+}
+
+h2 {
+  .font-normal(@font-sizes-h2);
+}
+
+h3 {
+  .font-normal(@font-sizes-h3);
+}
+
+.clearfix {
+  .micro-clearfix();
+}

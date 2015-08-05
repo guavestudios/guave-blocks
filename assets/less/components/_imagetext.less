@@ -1,0 +1,23 @@
+.imagetext {
+  overflow: hidden;
+
+  &__text,
+  &__image {
+    margin: 3rem 0;
+
+    @media only screen and (min-width : 768px) {
+      float: left;
+      width: 44%;
+      padding: 0 3%;
+    }
+  }
+
+  &&--reverse {
+    .imagetext__text,
+    .imagetext__image {
+      @media only screen and (min-width : 768px) {
+        float: right;
+      }
+    }
+  }
+}

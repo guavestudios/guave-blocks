@@ -1,0 +1,99 @@
+.responsive(@min-width; @rules) {
+  @media only screen and (min-width: @min-width) {
+    @rules();
+  }
+}
+
+.tablet-portrait(@min-width; @rules) {
+  @media only screen and (min-width: @min-width) and (orientation: portrait) {
+    @rules();
+  }
+}
+
+.tablet-landscape(@min-width; @rules) {
+  @media only screen and (min-width: @min-width) and (orientation: landscape) {
+    @rules();
+  }
+}
+
+.font-size(@list: @font-size-normal) {
+  font-size: extract(@list, 1);
+
+  .responsive(@min-width-tablet, {
+    font-size: extract(@list, 2);
+  } );
+  .responsive(@min-width-desktop-sm, {
+    font-size: extract(@list, 3);
+  } );
+}
+
+.font-normal(@list: @font-size-normal) {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  .font-size(@list);
+}
+
+.font-bold(@list: @font-size-normal) {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .font-size(@list);
+}
+
+
+.transition(@transition: all 0.4 ease) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -o-transition: @transition;
+  -ms-transition: @transition;
+  transition: @transition;
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -o-transform: @transform;
+  -ms-transform: @transform;
+  transform: @transform;
+}
+
+.vertical-align() {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontal-align() {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.border-radius (@border-radius: 0px) {
+  -webkit-border-radius: @border-radius;
+  -moz-border-radius: @border-radius;
+  border-radius: @border-radius;
+}
+
+.box-shadow (@shadow) {
+  -webkit-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+.micro-clearfix() {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
