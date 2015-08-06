@@ -1,0 +1,19 @@
+.calltoaction {
+  margin: 3rem 0;
+  text-align: center;
+
+  @media only screen and (min-width : 768px) {
+    padding: 0 3%;
+  }
+
+  &__button {
+    &:extend(.button);
+    color: @black;
+    padding: 20px 25px;
+
+    &:hover {
+      &:extend(.button:hover);
+      color: @black;
+    }
+  }
+}

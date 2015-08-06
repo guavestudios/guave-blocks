@@ -146,9 +146,21 @@ table {
 }
 @media only screen and (min-width: 500px) {
   .container {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
     padding: 0;
     margin: 0 auto;
-    max-width: 960px;
+    width: 720px;
+    max-width: inherit;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .container {
+    width: 960px;
   }
 }
 body {
@@ -159,7 +171,7 @@ body {
   font-weight: normal;
   font-size: 1rem;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   body {
     font-size: 1.25rem;
   }
@@ -196,7 +208,7 @@ h1 {
   line-height: 1.25;
   margin-bottom: 1.5rem;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   h1 {
     font-size: 4.4375rem;
   }
@@ -225,7 +237,7 @@ h2 {
   font-weight: normal;
   font-size: 2rem;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   h2 {
     font-size: 2.625rem;
   }
@@ -243,7 +255,7 @@ h3 {
   font-weight: normal;
   font-size: 1.25rem;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   h3 {
     font-size: 1.5rem;
   }
@@ -324,7 +336,7 @@ form {
   font-weight: normal;
   width: 100%;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup select {
     font-size: 1.25rem;
   }
@@ -452,7 +464,8 @@ form {
   margin-top: 0.4375rem;
 }
 .button,
-.formgroup__submit button {
+.formgroup__submit button,
+.calltoaction__button {
   display: inline-block;
   padding: 10px 12px;
   background-color: #a4c92c;
@@ -470,19 +483,22 @@ form {
   font-weight: normal;
   font-size: 1rem;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .button,
-  .formgroup__submit button {
+  .formgroup__submit button,
+  .calltoaction__button {
     font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 1100px) {
   .button,
-  .formgroup__submit button {
+  .formgroup__submit button,
+  .calltoaction__button {
     font-size: 1.25rem;
   }
 }
-.button:hover {
+.button:hover,
+.calltoaction__button:hover {
   background-color: #cddc39;
   color: #ffffff;
 }
@@ -506,4 +522,33 @@ form {
   .imagetext.imagetext--reverse .imagetext__image {
     float: right;
   }
+}
+.textcolumn {
+  overflow: hidden;
+}
+.textcolumn__text {
+  margin: 3rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .textcolumn__text {
+    float: left;
+    width: 44%;
+    padding: 0 3%;
+  }
+}
+.calltoaction {
+  margin: 3rem 0;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .calltoaction {
+    padding: 0 3%;
+  }
+}
+.calltoaction__button {
+  color: #000000;
+  padding: 20px 25px;
+}
+.calltoaction__button:hover {
+  color: #000000;
 }
