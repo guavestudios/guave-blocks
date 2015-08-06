@@ -1,0 +1,249 @@
+/*
+  This file is only for presentation purposes
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+  GENERAL
+*/
+/*
+  LINKS
+*/
+/*
+  FORMS
+*/
+/*
+	Headlines text sizes
+*/
+/*
+	Standard text sizes
+*/
+.container {
+  padding: 0 20px;
+}
+@media only screen and (min-width: 500px) {
+  .container {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    width: 720px;
+    max-width: inherit;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .container {
+    width: 960px;
+  }
+}
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+@media only screen and (min-width: 500px) {
+  .row {
+    margin: 0 -3%;
+  }
+}
+.guaveblocks__square {
+  display: table;
+  float: left;
+  padding: 0 3%;
+  overflow: hidden;
+  width: 19%;
+  margin: 1% 0;
+}
+.guaveblocks__link {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  font-size: 1rem;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  -o-transition: background 0.4s ease;
+  -ms-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+  background-color: #a4c92c;
+  color: #000000;
+  display: table-cell;
+  padding: 2.5rem 0;
+  text-align: center;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 768px) {
+  .guaveblocks__link {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .guaveblocks__link {
+    font-size: 1.25rem;
+  }
+}
+.guaveblocks__link:hover {
+  background: #cddc39;
+  color: #000000;
+}
+.fixedheader {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: none;
+  background: #ffffff;
+  padding: 2rem 0;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+  box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+}
+.shownavigation {
+  float: right;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+.shownavigation .fa {
+  font-size: 2rem;
+}
+.hidenavigation {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.hidenavigation .fa {
+  font-size: 2rem;
+}

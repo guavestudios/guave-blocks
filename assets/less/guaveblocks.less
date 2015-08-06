@@ -1,0 +1,64 @@
+/*
+  This file is only for presentation purposes
+*/
+
+@import "config/config";
+@import "helpers/helpers";
+
+.guaveblocks {
+  &__square {
+    display: table;
+    float: left;
+    padding: 0 3%;
+    overflow: hidden;
+    width: 19%;
+    margin: 1% 0;
+  }
+
+  &__link {
+    .font-normal(@font-size-normal);
+    .transition(background 0.4s ease);
+    background-color: @link-color;
+    color: @black;
+    display: table-cell;
+    padding: 2.5rem 0;
+    text-align: center;
+    vertical-align: middle;
+
+    &:hover {
+      background: @link-hover-color;
+      color: @black;
+    }
+  }
+}
+
+.fixedheader {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: none;
+  background: @white;
+  padding: 2rem 0;
+  .box-shadow(0px 2px 8px 0px rgba(50,50,50,0.08));
+}
+
+.shownavigation {
+  float: right;
+  cursor: pointer;
+  padding: 1rem 0;
+
+  .fa {
+    font-size: 2rem;
+  }
+}
+
+.hidenavigation {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  .fa {
+    font-size: 2rem;
+  }
+}

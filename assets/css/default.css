@@ -163,6 +163,19 @@ table {
     width: 960px;
   }
 }
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+@media only screen and (min-width: 500px) {
+  .row {
+    margin: 0 -3%;
+  }
+}
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -188,6 +201,10 @@ img {
 a {
   text-decoration: none;
   color: #a4c92c;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
   transition: color 0.4s ease;
 }
 a:hover {
