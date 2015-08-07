@@ -2,12 +2,25 @@
   <form>
     <div class="formgroup">
       <fieldset class="formgroup__fieldset">
+        <div class="formgroup__input formgroup__input--short clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
+          <label>Short Input</label>
+          <input type="text">
+        </div>
         <div class="formgroup__input clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <label>Normal Input</label>
           <input type="text">
         </div>
-        <div class="formgroup__input formgroup__input--short clearfix">
-          <label>Short Input</label>
+        <div class="formgroup__input formgroup__input--error clearfix">
+          <div class="formgroup__error" style="display: block;">
+            Bitte Feld ausfüllen
+          </div>
+          <label>Normal Input</label>
           <input type="text">
         </div>
       </fieldset>
@@ -15,6 +28,9 @@
     <div class="formgroup">
       <fieldset class="formgroup__fieldset">
         <div class="formgroup__select clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <label>Select</label>
           <select>
             <option>Option 1</option>
@@ -24,6 +40,9 @@
           <i class="fa fa-angle-down"></i>
         </div>
         <div class="formgroup__select formgroup__select--short clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <label>Select Short</label>
           <select>
             <option>Option 1</option>
@@ -37,6 +56,9 @@
     <div class="formgroup">
       <fieldset class="formgroup__fieldset">
         <div class="formgroup__radio formgroup__radio--floated clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <span class="pseudo__label">Pseudo Label Radio</span>
           <div class="formgroup__radios formgroup__radios--rounded formgroup__radios--floated">
             <div class="formgroup__choice">
@@ -50,6 +72,9 @@
           </div>
         </div>
         <div class="formgroup__checkbox formgroup__checkbox--floated clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <span class="pseudo__label">Pseudo Label Radio</span>
           <div class="formgroup__radios formgroup__checkboxes--rounded">
             <div class="formgroup__choice">
@@ -67,6 +92,9 @@
     <div class="formgroup">
       <fieldset class="formgroup__fieldset">
         <div class="formgroup__checkbox formgroup__checkbox--floated clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <span class="pseudo__label">Pseudo Label Checkbox</span>
           <div class="formgroup__checkboxes">
             <div class="formgroup__choice">
@@ -80,6 +108,9 @@
           </div>
         </div>
         <div class="formgroup__checkbox formgroup__checkbox--floated clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <span class="pseudo__label">Pseudo Label Checkbox</span>
           <div class="formgroup__checkboxes formgroup__checkboxes--floated">
             <div class="formgroup__choice">
@@ -96,10 +127,16 @@
     </div>
     <div class="formgroup">
       <div class="formgroup__input clearfix">
+        <div class="formgroup__error">
+          Bitte Feld ausfüllen
+        </div>
         <label>Normal Input</label>
         <input type="text">
       </div>
       <div class="formgroup__input formgroup__input--short clearfix">
+        <div class="formgroup__error">
+          Bitte Feld ausfüllen
+        </div>
         <label>Short Input</label>
         <input type="text">
       </div>
@@ -107,14 +144,32 @@
     <div class="formgroup">
       <fieldset class="formgroup__fieldset">
         <div class="formgroup__input clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
           <label>Normal Input</label>
           <input type="text">
         </div>
         <div class="formgroup__input formgroup__input--short clearfix">
+          <div class="formgroup__error">
+            Bitte Feld ausfüllen
+          </div>
+
           <label>Short Input</label>
           <input type="text">
         </div>
       </fieldset>
+    </div>
+    <div class="formgroup">
+      <div class="formgroup__input formgroup__input--floated clearfix">
+        <div class="formgroup__error">
+          Bitte Feld ausfüllen
+        </div>
+
+        <label>ZIP / City</label>
+        <input type="number">
+        <input type="text">
+      </div>
     </div>
     <div class="formgroup">
       <div class="formgroup__submit clearfix">

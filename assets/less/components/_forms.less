@@ -9,10 +9,10 @@ form {
     padding: 0.625rem 0;
     line-height: 1;
 
-    @media only screen and (min-width : @min-width-phone) {
+    .responsive(@min-width-phone, {
       float: left;
       width: 41%;
-    }
+    } );
   }
 
   input {
@@ -33,10 +33,10 @@ form {
       font-weight: normal;
       width: 100%;
 
-      @media only screen and (min-width : @min-width-phone) {
+      .responsive(@min-width-phone, {
         float: left;
         width: 59%;
-      }
+      } );
     }
   }
 
@@ -54,18 +54,18 @@ form {
     font-weight: normal;
     width: 100%;
 
-    @media only screen and (min-width : @min-width-phone) {
+    .responsive(@min-width-phone, {
       width: 59%;
-    }
+    } );
 
     + .fa-angle-down {
       position: absolute;
       right: 2%;
       top: 51px;
 
-      @media only screen and (min-width : @min-width-phone) {
+      .responsive(@min-width-phone, {
         top: 13px;
-      }
+      } );
     }
   }
 
@@ -147,21 +147,81 @@ form {
         &[type="search"],
         &[type="url"],
         &[type="text"] {
-          @media only screen and (min-width : @min-width-phone) {
+          .responsive(@min-width-phone, {
             width: 20%;
-          }
+          } );
         }
       }
 
       select {
-        @media only screen and (min-width : @min-width-phone) {
+        .responsive(@min-width-phone, {
           width: 20%;
-        }
+        } );
 
         + .fa-angle-down {
-          @media only screen and (min-width : @min-width-phone) {
+          .responsive(@min-width-phone, {
             right: 41%;
-          }
+          } );
+        }
+      }
+    }
+  }
+
+  &__input {
+    &--floated {
+      input {
+
+        &[type="number"] {
+          float: left;
+          width: 30%;
+
+          .responsive(@min-width-phone, {
+          max-width: 80px;
+          } );
+        }
+
+        &[type="text"] {
+          float: right;
+          width: 65%;
+
+          .responsive(@min-width-phone, {
+            max-width: 181px
+          } );
+
+          .responsive(@min-width-tablet, {
+            max-width: 254px
+          } );
+
+        }
+      }
+    }
+
+    &--error {
+      label {
+        float: left;
+      }
+
+      .formgroup__error {
+        padding: 0.625rem 0;
+        line-height: 1;
+        float: right;
+
+        .responsive(@min-width-phone, {
+          padding: 0;
+          float: none;
+        } );
+      }
+
+      input {
+        &[type="number"],
+        &[type="password"],
+        &[type="email"],
+        &[type="tel"],
+        &[type="search"],
+        &[type="url"],
+        &[type="text"] {
+          background: @alert-red-color;
+          color: @white;
         }
       }
     }
@@ -185,6 +245,14 @@ form {
     margin-top: 0.4375rem;
   }
 
+  &__error {
+    color: @alert-red-color;
+    display: none;
+
+    .responsive(@min-width-phone, {
+      margin: 0 0 0.5rem 41%;
+    } );
+  }
 }
 
 .button {

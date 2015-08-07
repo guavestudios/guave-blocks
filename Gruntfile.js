@@ -15,7 +15,7 @@ module.exports = function (grunt) {
       dist: {
         src: [
           'assets/js/libs/jquery-2.1.3.min.js',
-          'assets/js/libs/highlight.pack.js',
+          'assets/js/libs/prism.js',
           'assets/js/themefunctions.js'
         ],
         dest: 'assets/js/theme.js'

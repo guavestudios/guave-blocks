@@ -136,6 +136,9 @@ table {
   FORMS
 */
 /*
+  ALERTS / ERRORS
+*/
+/*
 	Headlines text sizes
 */
 /*
@@ -175,6 +178,20 @@ table {
   .row {
     margin: 0 -3%;
   }
+}
+.hidden {
+  display: none;
+}
+.error {
+  color: #e53935;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 body {
   font-family: 'Open Sans', sans-serif;
@@ -281,14 +298,6 @@ h3 {
   h3 {
     font-size: 1.875rem;
   }
-}
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
 }
 form {
   max-width: 600px;
@@ -468,6 +477,53 @@ form {
     right: 41%;
   }
 }
+.formgroup__input--floated input[type="number"] {
+  float: left;
+  width: 30%;
+}
+@media only screen and (min-width: 500px) {
+  .formgroup__input--floated input[type="number"] {
+    max-width: 80px;
+  }
+}
+.formgroup__input--floated input[type="text"] {
+  float: right;
+  width: 65%;
+}
+@media only screen and (min-width: 500px) {
+  .formgroup__input--floated input[type="text"] {
+    max-width: 181px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .formgroup__input--floated input[type="text"] {
+    max-width: 254px;
+  }
+}
+.formgroup__input--error label {
+  float: left;
+}
+.formgroup__input--error .formgroup__error {
+  padding: 0.625rem 0;
+  line-height: 1;
+  float: right;
+}
+@media only screen and (min-width: 500px) {
+  .formgroup__input--error .formgroup__error {
+    padding: 0;
+    float: none;
+  }
+}
+.formgroup__input--error input[type="number"],
+.formgroup__input--error input[type="password"],
+.formgroup__input--error input[type="email"],
+.formgroup__input--error input[type="tel"],
+.formgroup__input--error input[type="search"],
+.formgroup__input--error input[type="url"],
+.formgroup__input--error input[type="text"] {
+  background: #e53935;
+  color: #ffffff;
+}
 .formgroup__submit button {
   float: right;
 }
@@ -479,6 +535,15 @@ form {
 .formgroup__radio,
 .formgroup__checkbox {
   margin-top: 0.4375rem;
+}
+.formgroup__error {
+  color: #e53935;
+  display: none;
+}
+@media only screen and (min-width: 500px) {
+  .formgroup__error {
+    margin: 0 0 0.5rem 41%;
+  }
 }
 .button,
 .formgroup__submit button,

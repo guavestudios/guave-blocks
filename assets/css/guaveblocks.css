@@ -139,6 +139,9 @@ table {
   FORMS
 */
 /*
+  ALERTS / ERRORS
+*/
+/*
 	Headlines text sizes
 */
 /*
@@ -178,6 +181,20 @@ table {
   .row {
     margin: 0 -3%;
   }
+}
+.hidden {
+  display: none;
+}
+.error {
+  color: #e53935;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 .guaveblocks__square {
   display: table;

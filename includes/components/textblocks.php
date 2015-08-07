@@ -23,8 +23,35 @@
     </section>
     <section>
       <pre>
-        <code class="html">
-          <p>Title</p>
+        <code class="language-markup">
+
+          <?php
+          $code = htmlspecialchars('
+            <section class="imagetext">
+              <aside class="imagetext__image" role="complementary">
+                <figure>
+                  <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=900%C3%97600&w=900&h=600">
+                </figure>
+              </aside>
+              <article class="imagetext__text">
+                <header>
+                  <h2>
+                    Title
+                  </h2>
+                </header>
+                <section>
+                  <p>
+                    Minions ipsum bananaaaa gelatooo baboiii gelatooo me want bananaaa! Butt poopayee aaaaaah bananaaaa.
+                    Me want bananaaa! aaaaaah hahaha tulaliloo para tú. Hana dul sae ti aamoo! Ti aamoo! Bee do bee do
+                    bee do. Bee do bee do bee do chasy potatoooo pepete. Baboiii poulet tikka masala jiji potatoooo.
+                  </p>
+                </section>
+              </article>
+            </section>
+          ');
+          echo $code;
+          ?>
+
         </code>
       </pre>
     </section>
