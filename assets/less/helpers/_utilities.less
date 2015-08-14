@@ -2,6 +2,14 @@
   display: none;
 }
 
+.visible-desktop-sm {
+  display: none;
+
+  .responsive(@min-width-desktop-sm, {
+    display: block;
+  } );
+}
+
 .error {
   color: @alert-red-color
 }
