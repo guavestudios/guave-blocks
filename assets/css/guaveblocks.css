@@ -147,14 +147,14 @@ table {
 /*
 	Standard text sizes
 */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * At which point should lap and desk breakpoints kick in?
+ */
 .container {
   padding: 0 20px;
-}
-@media only screen and (min-width: 500px) {
-  .container {
-    margin: 0 auto;
-    max-width: 600px;
-  }
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -177,7 +177,7 @@ table {
 .row:after {
   clear: both;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .row {
     margin: 0 -3%;
   }
@@ -188,7 +188,7 @@ table {
 .visible-desktop-sm {
   display: none;
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 768px) {
   .visible-desktop-sm {
     display: block;
   }
@@ -236,7 +236,7 @@ table {
     font-size: 1.25rem;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   .guaveblocks__link {
     font-size: 1.25rem;
   }

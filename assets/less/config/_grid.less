@@ -1,36 +1,10 @@
 /**
- * If you are building a non-responsive site but would still like to use
- * the grid, set this to ‘false’:
- */
-@responsive: true;
-
-/**
- * Is this build mobile first? Setting to ‘true’ means that all grids will be
- * 100% width if you do not apply a more specific class to them.
- */
-@mobile-first: true;
-
-/**
  * Set the spacing between your grid items.
  */
 @gutter: 20px;
 
 /**
- * Would you like push and pull classes enabled?
+ * At which point should lap and desk breakpoints kick in?
  */
-@push: false;
-@pull: false;
-
-/**
- * Using `inline-block` means that the grid items need their whitespace removing
- * in order for them to work correctly. Set the following to true if you are
- * going to achieve this by manually removing/commenting out any whitespace in
- * your HTML yourself.
- *
- * Setting this to false invokes a hack which cannot always be guaranteed,
- * please see the following for more detail:
- *
- * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
- * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
- */
-@use-markup-fix: true;
+@lap-start: @min-width-sm;
+@desk-start: @min-width-md;

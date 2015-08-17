@@ -17,6 +17,9 @@
     <div class="row">
       <div class="guaveblocks">
         <div class="guaveblocks__square">
+          <a class="guaveblocks__link" href="grid.php">Grid</a>
+        </div>
+        <div class="guaveblocks__square">
           <a class="guaveblocks__link" href="forms.php">Forms</a>
         </div>
         <div class="guaveblocks__square">

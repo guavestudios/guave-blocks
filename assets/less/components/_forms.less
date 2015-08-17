@@ -9,7 +9,7 @@ form {
     padding: 0.625rem 0;
     line-height: 1;
 
-    .responsive(@min-width-phone, {
+    .responsive(@min-width-sm, {
       float: left;
       width: 41%;
     } );
@@ -29,11 +29,11 @@ form {
       color: @black;
       padding: 0.625rem 7px;
       box-sizing: border-box;
-      font-size: @font-size-normal;
+      .font-normal(@font-size-normal);
       font-weight: normal;
       width: 100%;
 
-      .responsive(@min-width-phone, {
+      .responsive(@min-width-sm, {
         float: left;
         width: 59%;
       } );
@@ -54,7 +54,7 @@ form {
     font-weight: normal;
     width: 100%;
 
-    .responsive(@min-width-phone, {
+    .responsive(@min-width-sm, {
       width: 59%;
     } );
 
@@ -63,7 +63,7 @@ form {
       right: 2%;
       top: 51px;
 
-      .responsive(@min-width-phone, {
+      .responsive(@min-width-sm, {
         top: 13px;
       } );
     }
@@ -81,7 +81,7 @@ form {
 
   &__checkboxes,
   &__radios {
-    @media only screen and (min-width : @min-width-phone) {
+    @media only screen and (min-width : @min-width-sm) {
       float: left;
       width: 59%;
     }
@@ -147,19 +147,19 @@ form {
         &[type="search"],
         &[type="url"],
         &[type="text"] {
-          .responsive(@min-width-phone, {
+          .responsive(@min-width-sm, {
             width: 20%;
           } );
         }
       }
 
       select {
-        .responsive(@min-width-phone, {
+        .responsive(@min-width-sm, {
           width: 20%;
         } );
 
         + .fa-angle-down {
-          .responsive(@min-width-phone, {
+          .responsive(@min-width-sm, {
             right: 41%;
           } );
         }
@@ -175,7 +175,7 @@ form {
           float: left;
           width: 30%;
 
-          .responsive(@min-width-phone, {
+          .responsive(@min-width-sm, {
           max-width: 80px;
           } );
         }
@@ -184,11 +184,7 @@ form {
           float: right;
           width: 65%;
 
-          .responsive(@min-width-phone, {
-            max-width: 181px
-          } );
-
-          .responsive(@min-width-tablet, {
+          .responsive(@min-width-sm, {
             max-width: 254px
           } );
 
@@ -206,7 +202,7 @@ form {
         line-height: 1;
         float: right;
 
-        .responsive(@min-width-phone, {
+        .responsive(@min-width-sm, {
           padding: 0;
           float: none;
         } );
@@ -249,7 +245,7 @@ form {
     color: @alert-red-color;
     display: none;
 
-    .responsive(@min-width-phone, {
+    .responsive(@min-width-sm, {
       margin: 0 0 0.5rem 41%;
     } );
   }

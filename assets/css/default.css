@@ -144,14 +144,14 @@ table {
 /*
 	Standard text sizes
 */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * At which point should lap and desk breakpoints kick in?
+ */
 .container {
   padding: 0 20px;
-}
-@media only screen and (min-width: 500px) {
-  .container {
-    margin: 0 auto;
-    max-width: 600px;
-  }
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -174,7 +174,7 @@ table {
 .row:after {
   clear: both;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .row {
     margin: 0 -3%;
   }
@@ -185,7 +185,7 @@ table {
 .visible-desktop-sm {
   display: none;
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 768px) {
   .visible-desktop-sm {
     display: block;
   }
@@ -214,7 +214,7 @@ body {
     font-size: 1.25rem;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   body {
     font-size: 1.25rem;
   }
@@ -255,17 +255,17 @@ h1 {
     font-size: 4.4375rem;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   h1 {
     font-size: 6.25rem;
   }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   h1 {
     line-height: 1.5;
   }
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1100px) {
   h1 {
     line-height: 1.25;
     margin-bottom: 5rem;
@@ -284,7 +284,7 @@ h2 {
     font-size: 2.625rem;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   h2 {
     font-size: 3.75rem;
   }
@@ -302,10 +302,36 @@ h3 {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   h3 {
     font-size: 1.875rem;
   }
+}
+/*------------------------------------*\
+    @GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ * 4. Remove whitespace caused by `inline-block` elements.
+ */
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -20px;
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+}
+.grid__item {
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 form {
   max-width: 600px;
@@ -316,7 +342,7 @@ form {
   padding: 0.625rem 0;
   line-height: 1;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup .pseudo__label,
   .formgroup label {
     float: left;
@@ -336,11 +362,37 @@ form {
   color: #000000;
   padding: 0.625rem 7px;
   box-sizing: border-box;
-  font-size: 1rem, 1.25rem, 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
   font-weight: normal;
   width: 100%;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
+  .formgroup input[type="number"],
+  .formgroup input[type="password"],
+  .formgroup input[type="email"],
+  .formgroup input[type="tel"],
+  .formgroup input[type="search"],
+  .formgroup input[type="url"],
+  .formgroup input[type="text"] {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .formgroup input[type="number"],
+  .formgroup input[type="password"],
+  .formgroup input[type="email"],
+  .formgroup input[type="tel"],
+  .formgroup input[type="search"],
+  .formgroup input[type="url"],
+  .formgroup input[type="text"] {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) {
   .formgroup input[type="number"],
   .formgroup input[type="password"],
   .formgroup input[type="email"],
@@ -375,12 +427,12 @@ form {
     font-size: 1.25rem;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   .formgroup select {
     font-size: 1.25rem;
   }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup select {
     width: 59%;
   }
@@ -390,7 +442,7 @@ form {
   right: 2%;
   top: 51px;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup select + .fa-angle-down {
     top: 13px;
   }
@@ -403,7 +455,7 @@ form {
 .formgroup__select {
   position: relative;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup__checkboxes,
   .formgroup__radios {
     float: left;
@@ -455,7 +507,7 @@ form {
 .formgroup__radios input:checked + label:before {
   background: #000000;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup__input--short input[type="number"],
   .formgroup__select--short input[type="number"],
   .formgroup__input--short input[type="password"],
@@ -473,13 +525,13 @@ form {
     width: 20%;
   }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup__input--short select,
   .formgroup__select--short select {
     width: 20%;
   }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup__input--short select + .fa-angle-down,
   .formgroup__select--short select + .fa-angle-down {
     right: 41%;
@@ -489,7 +541,7 @@ form {
   float: left;
   width: 30%;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup__input--floated input[type="number"] {
     max-width: 80px;
   }
@@ -497,11 +549,6 @@ form {
 .formgroup__input--floated input[type="text"] {
   float: right;
   width: 65%;
-}
-@media only screen and (min-width: 500px) {
-  .formgroup__input--floated input[type="text"] {
-    max-width: 181px;
-  }
 }
 @media only screen and (min-width: 768px) {
   .formgroup__input--floated input[type="text"] {
@@ -516,7 +563,7 @@ form {
   line-height: 1;
   float: right;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup__input--error .formgroup__error {
     padding: 0;
     float: none;
@@ -548,7 +595,7 @@ form {
   color: #e53935;
   display: none;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 768px) {
   .formgroup__error {
     margin: 0 0 0.5rem 41%;
   }
@@ -580,7 +627,7 @@ form {
     font-size: 1.25rem;
   }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   .button,
   .formgroup__submit button,
   .calltoaction__button {

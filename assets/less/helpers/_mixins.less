@@ -19,10 +19,10 @@
 .font-size(@list: @font-size-normal) {
   font-size: extract(@list, 1);
 
-  .responsive(@min-width-tablet, {
+  .responsive(@min-width-sm, {
     font-size: extract(@list, 2);
   } );
-  .responsive(@min-width-desktop-sm, {
+  .responsive(@min-width-md, {
     font-size: extract(@list, 3);
   } );
 }
@@ -43,7 +43,6 @@
   -moz-osx-font-smoothing: grayscale;
   .font-size(@list);
 }
-
 
 .transition(@transition: all 0.4 ease) {
   -webkit-transition: @transition;

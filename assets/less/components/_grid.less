@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    @GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ * 4. Remove whitespace caused by `inline-block` elements.
+ */
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 0px - @gutter;
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+
+  &__item {
+    display: inline-block;
+    padding-left: @gutter;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+.device-type();
+
+.device-type(@namespace: ~"") {
+
+}
+
+
