@@ -148,7 +148,7 @@ table {
  * Chose the with of .container
  */
 /**
- * Set the spacing between your grid items.
+ * Set the spacing between your grid items and the spacing for the .container on mobile
  */
 .hidden {
   display: none;
@@ -323,6 +323,7 @@ h3 {
   word-spacing: normal;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  width: 100%;
 }
 .grid__item:before,
 .grid__item:after {

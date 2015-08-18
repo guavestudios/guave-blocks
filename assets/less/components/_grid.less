@@ -8,7 +8,7 @@
  * 4. Remove whitespace caused by `inline-block` elements.
  */
 .container {
-  padding: 0 20px;
+  padding: 0 @gutter;
 
   .responsive(@min-width-sm, {
     padding: 0;
@@ -41,7 +41,7 @@
     word-spacing: normal;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-
+    width: 100%;
     .micro-clearfix();
   }
 }

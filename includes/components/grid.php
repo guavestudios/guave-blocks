@@ -1,58 +1,58 @@
 <section class="container" role="main">
   <div class="grid">
-    <div class="grid__item one-whole sm-one-half">
+    <div class="grid__item sm-one-half">
       <p class="demo-block">
-        .one-whole.sm-one-half
+        .sm-one-half
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-half">
+    <div class="grid__item sm-one-half">
       <p class="demo-block">
-        .one-whole.sm-one-half
+        .sm-one-half
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-third">
+    <div class="grid__item sm-one-third">
       <p class="demo-block">
-        .one-whole.sm-one-third
+        .sm-one-third
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-third">
+    <div class="grid__item sm-one-third">
       <p class="demo-block">
-        .one-whole.sm-one-third
+        .sm-one-third
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-third">
+    <div class="grid__item sm-one-third">
       <p class="demo-block">
-        .one-whole.sm-one-third
+        .sm-one-third
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-quarter">
+    <div class="grid__item sm-one-quarter">
       <p class="demo-block">
-        .one-whole.sm-one-quarter
+        .sm-one-quarter
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-quarter">
+    <div class="grid__item sm-one-quarter">
       <p class="demo-block">
-        .one-whole.sm-one-quarter
+        .sm-one-quarter
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-quarter">
+    <div class="grid__item sm-one-quarter">
       <p class="demo-block">
-        .one-whole.sm-one-quarter
+        .sm-one-quarter
       </p>
     </div>
-    <div class="grid__item one-whole sm-one-quarter">
+    <div class="grid__item sm-one-quarter">
       <p class="demo-block">
-        .one-whole.sm-one-quarter
+        .sm-one-quarter
       </p>
     </div>
-    <div class="grid__item one-whole sm-three-fifths">
+    <div class="grid__item sm-three-fifths">
       <p class="demo-block">
-        .one-whole.sm-three-fifths
+        .sm-three-fifths
       </p>
     </div>
-    <div class="grid__item one-whole sm-two-fifths">
+    <div class="grid__item sm-two-fifths">
       <p class="demo-block">
-        .one-whole.sm-three-fifths
+        .sm-three-fifths
       </p>
     </div>
   </div>
