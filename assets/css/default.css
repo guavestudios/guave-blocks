@@ -144,41 +144,12 @@ table {
 /*
 	Standard text sizes
 */
+/*
+ * Chose the with of .container
+ */
 /**
  * Set the spacing between your grid items.
  */
-/**
- * At which point should lap and desk breakpoints kick in?
- */
-.container {
-  padding: 0 20px;
-}
-@media only screen and (min-width: 768px) {
-  .container {
-    padding: 0;
-    margin: 0 auto;
-    width: 720px;
-    max-width: inherit;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  .container {
-    width: 960px;
-  }
-}
-.row:before,
-.row:after {
-  content: "";
-  display: table;
-}
-.row:after {
-  clear: both;
-}
-@media only screen and (min-width: 768px) {
-  .row {
-    margin: 0 -3%;
-  }
-}
 .hidden {
   display: none;
 }
@@ -313,25 +284,683 @@ h3 {
 /**
  * 1. Allow the grid system to be used on lists.
  * 2. Remove any margins and paddings that might affect the grid system.
- * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ * 3. Apply a negative `margin-left` to negate the columnsâ€™ gutters.
  * 4. Remove whitespace caused by `inline-block` elements.
  */
+.container {
+  padding: 0 20px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .container {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .container {
+    width: 1040px;
+  }
+}
 .grid {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: -20px;
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
+  margin-right: -20px;
 }
 .grid__item {
-  display: inline-block;
+  float: left;
   padding-left: 20px;
+  padding-right: 20px;
   vertical-align: top;
   letter-spacing: normal;
   word-spacing: normal;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+.grid__item:before,
+.grid__item:after {
+  content: "";
+  display: table;
+}
+.grid__item:after {
+  clear: both;
+}
+/**
+       * Whole
+       */
+.one-whole {
+  width: 100%;
+}
+/**
+   * Halves
+   */
+.one-half {
+  width: 50%;
+}
+/**
+   * Thirds
+   */
+.one-third {
+  width: 33.333%;
+}
+.two-thirds {
+  width: 66.666%;
+}
+/**
+   * Quarters
+   */
+.one-quarter {
+  width: 25%;
+}
+.two-quarters {
+  width: 50%;
+}
+.three-quarters {
+  width: 75%;
+}
+/**
+   * Fifths
+   */
+.one-fifth {
+  width: 20%;
+}
+.two-fifths {
+  width: 40%;
+}
+.three-fifths {
+  width: 60%;
+}
+.four-fifths {
+  width: 80%;
+}
+/**
+   * Sixths
+   */
+.one-sixth {
+  width: 16.666%;
+}
+.two-sixths {
+  width: 33.333%;
+}
+.three-sixths {
+  width: 50%;
+}
+.four-sixths {
+  width: 66.666%;
+}
+.five-sixths {
+  width: 83.333%;
+}
+/**
+   * Eighths
+   */
+.one-eighth {
+  width: 12.5%;
+}
+.two-eighths {
+  width: 25%;
+}
+.three-eighths {
+  width: 37.5%;
+}
+.four-eighths {
+  width: 50%;
+}
+.five-eighths {
+  width: 62.5%;
+}
+.six-eighths {
+  width: 75%;
+}
+.seven-eighths {
+  width: 87.5%;
+}
+/**
+   * Tenths
+   */
+.one-tenth {
+  width: 10%;
+}
+.two-tenths {
+  width: 20%;
+}
+.three-tenths {
+  width: 30%;
+}
+.four-tenths {
+  width: 60%;
+}
+.five-tenths {
+  width: 50%;
+}
+.six-tenths {
+  width: 60%;
+}
+.seven-tenths {
+  width: 70%;
+}
+.eight-tenths {
+  width: 80%;
+}
+.nine-tenths {
+  width: 90%;
+}
+/**
+   * Twelfths
+   */
+.one-twelfth {
+  width: 8.333%;
+}
+.two-twelfths {
+  width: 16.666%;
+}
+.three-twelfths {
+  width: 25%;
+}
+.four-twelfths {
+  width: 33.333%;
+}
+.five-twelfths {
+  width: 41.666%;
+}
+.six-twelfths {
+  width: 50%;
+}
+.seven-twelfths {
+  width: 58.333%;
+}
+.eight-twelfths {
+  width: 66.666%;
+}
+.nine-twelfths {
+  width: 75%;
+}
+.ten-twelfths {
+  width: 83.333%;
+}
+.eleven-twelfths {
+  width: 91.666%;
+}
+@media only screen and (min-width: 768px) {
+  /**
+       * Whole
+       */
+  .sm-one-whole {
+    width: 100%;
+  }
+  /**
+   * Halves
+   */
+  .sm-one-half {
+    width: 50%;
+  }
+  /**
+   * Thirds
+   */
+  .sm-one-third {
+    width: 33.333%;
+  }
+  .sm-two-thirds {
+    width: 66.666%;
+  }
+  /**
+   * Quarters
+   */
+  .sm-one-quarter {
+    width: 25%;
+  }
+  .sm-two-quarters {
+    width: 50%;
+  }
+  .sm-three-quarters {
+    width: 75%;
+  }
+  /**
+   * Fifths
+   */
+  .sm-one-fifth {
+    width: 20%;
+  }
+  .sm-two-fifths {
+    width: 40%;
+  }
+  .sm-three-fifths {
+    width: 60%;
+  }
+  .sm-four-fifths {
+    width: 80%;
+  }
+  /**
+   * Sixths
+   */
+  .sm-one-sixth {
+    width: 16.666%;
+  }
+  .sm-two-sixths {
+    width: 33.333%;
+  }
+  .sm-three-sixths {
+    width: 50%;
+  }
+  .sm-four-sixths {
+    width: 66.666%;
+  }
+  .sm-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Eighths
+   */
+  .sm-one-eighth {
+    width: 12.5%;
+  }
+  .sm-two-eighths {
+    width: 25%;
+  }
+  .sm-three-eighths {
+    width: 37.5%;
+  }
+  .sm-four-eighths {
+    width: 50%;
+  }
+  .sm-five-eighths {
+    width: 62.5%;
+  }
+  .sm-six-eighths {
+    width: 75%;
+  }
+  .sm-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+   * Tenths
+   */
+  .sm-one-tenth {
+    width: 10%;
+  }
+  .sm-two-tenths {
+    width: 20%;
+  }
+  .sm-three-tenths {
+    width: 30%;
+  }
+  .sm-four-tenths {
+    width: 60%;
+  }
+  .sm-five-tenths {
+    width: 50%;
+  }
+  .sm-six-tenths {
+    width: 60%;
+  }
+  .sm-seven-tenths {
+    width: 70%;
+  }
+  .sm-eight-tenths {
+    width: 80%;
+  }
+  .sm-nine-tenths {
+    width: 90%;
+  }
+  /**
+   * Twelfths
+   */
+  .sm-one-twelfth {
+    width: 8.333%;
+  }
+  .sm-two-twelfths {
+    width: 16.666%;
+  }
+  .sm-three-twelfths {
+    width: 25%;
+  }
+  .sm-four-twelfths {
+    width: 33.333%;
+  }
+  .sm-five-twelfths {
+    width: 41.666%;
+  }
+  .sm-six-twelfths {
+    width: 50%;
+  }
+  .sm-seven-twelfths {
+    width: 58.333%;
+  }
+  .sm-eight-twelfths {
+    width: 66.666%;
+  }
+  .sm-nine-twelfths {
+    width: 75%;
+  }
+  .sm-ten-twelfths {
+    width: 83.333%;
+  }
+  .sm-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  /**
+       * Whole
+       */
+  .md-one-whole {
+    width: 100%;
+  }
+  /**
+   * Halves
+   */
+  .md-one-half {
+    width: 50%;
+  }
+  /**
+   * Thirds
+   */
+  .md-one-third {
+    width: 33.333%;
+  }
+  .md-two-thirds {
+    width: 66.666%;
+  }
+  /**
+   * Quarters
+   */
+  .md-one-quarter {
+    width: 25%;
+  }
+  .md-two-quarters {
+    width: 50%;
+  }
+  .md-three-quarters {
+    width: 75%;
+  }
+  /**
+   * Fifths
+   */
+  .md-one-fifth {
+    width: 20%;
+  }
+  .md-two-fifths {
+    width: 40%;
+  }
+  .md-three-fifths {
+    width: 60%;
+  }
+  .md-four-fifths {
+    width: 80%;
+  }
+  /**
+   * Sixths
+   */
+  .md-one-sixth {
+    width: 16.666%;
+  }
+  .md-two-sixths {
+    width: 33.333%;
+  }
+  .md-three-sixths {
+    width: 50%;
+  }
+  .md-four-sixths {
+    width: 66.666%;
+  }
+  .md-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Eighths
+   */
+  .md-one-eighth {
+    width: 12.5%;
+  }
+  .md-two-eighths {
+    width: 25%;
+  }
+  .md-three-eighths {
+    width: 37.5%;
+  }
+  .md-four-eighths {
+    width: 50%;
+  }
+  .md-five-eighths {
+    width: 62.5%;
+  }
+  .md-six-eighths {
+    width: 75%;
+  }
+  .md-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+   * Tenths
+   */
+  .md-one-tenth {
+    width: 10%;
+  }
+  .md-two-tenths {
+    width: 20%;
+  }
+  .md-three-tenths {
+    width: 30%;
+  }
+  .md-four-tenths {
+    width: 60%;
+  }
+  .md-five-tenths {
+    width: 50%;
+  }
+  .md-six-tenths {
+    width: 60%;
+  }
+  .md-seven-tenths {
+    width: 70%;
+  }
+  .md-eight-tenths {
+    width: 80%;
+  }
+  .md-nine-tenths {
+    width: 90%;
+  }
+  /**
+   * Twelfths
+   */
+  .md-one-twelfth {
+    width: 8.333%;
+  }
+  .md-two-twelfths {
+    width: 16.666%;
+  }
+  .md-three-twelfths {
+    width: 25%;
+  }
+  .md-four-twelfths {
+    width: 33.333%;
+  }
+  .md-five-twelfths {
+    width: 41.666%;
+  }
+  .md-six-twelfths {
+    width: 50%;
+  }
+  .md-seven-twelfths {
+    width: 58.333%;
+  }
+  .md-eight-twelfths {
+    width: 66.666%;
+  }
+  .md-nine-twelfths {
+    width: 75%;
+  }
+  .md-ten-twelfths {
+    width: 83.333%;
+  }
+  .md-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  /**
+       * Whole
+       */
+  .lg-one-whole {
+    width: 100%;
+  }
+  /**
+   * Halves
+   */
+  .lg-one-half {
+    width: 50%;
+  }
+  /**
+   * Thirds
+   */
+  .lg-one-third {
+    width: 33.333%;
+  }
+  .lg-two-thirds {
+    width: 66.666%;
+  }
+  /**
+   * Quarters
+   */
+  .lg-one-quarter {
+    width: 25%;
+  }
+  .lg-two-quarters {
+    width: 50%;
+  }
+  .lg-three-quarters {
+    width: 75%;
+  }
+  /**
+   * Fifths
+   */
+  .lg-one-fifth {
+    width: 20%;
+  }
+  .lg-two-fifths {
+    width: 40%;
+  }
+  .lg-three-fifths {
+    width: 60%;
+  }
+  .lg-four-fifths {
+    width: 80%;
+  }
+  /**
+   * Sixths
+   */
+  .lg-one-sixth {
+    width: 16.666%;
+  }
+  .lg-two-sixths {
+    width: 33.333%;
+  }
+  .lg-three-sixths {
+    width: 50%;
+  }
+  .lg-four-sixths {
+    width: 66.666%;
+  }
+  .lg-five-sixths {
+    width: 83.333%;
+  }
+  /**
+   * Eighths
+   */
+  .lg-one-eighth {
+    width: 12.5%;
+  }
+  .lg-two-eighths {
+    width: 25%;
+  }
+  .lg-three-eighths {
+    width: 37.5%;
+  }
+  .lg-four-eighths {
+    width: 50%;
+  }
+  .lg-five-eighths {
+    width: 62.5%;
+  }
+  .lg-six-eighths {
+    width: 75%;
+  }
+  .lg-seven-eighths {
+    width: 87.5%;
+  }
+  /**
+   * Tenths
+   */
+  .lg-one-tenth {
+    width: 10%;
+  }
+  .lg-two-tenths {
+    width: 20%;
+  }
+  .lg-three-tenths {
+    width: 30%;
+  }
+  .lg-four-tenths {
+    width: 60%;
+  }
+  .lg-five-tenths {
+    width: 50%;
+  }
+  .lg-six-tenths {
+    width: 60%;
+  }
+  .lg-seven-tenths {
+    width: 70%;
+  }
+  .lg-eight-tenths {
+    width: 80%;
+  }
+  .lg-nine-tenths {
+    width: 90%;
+  }
+  /**
+   * Twelfths
+   */
+  .lg-one-twelfth {
+    width: 8.333%;
+  }
+  .lg-two-twelfths {
+    width: 16.666%;
+  }
+  .lg-three-twelfths {
+    width: 25%;
+  }
+  .lg-four-twelfths {
+    width: 33.333%;
+  }
+  .lg-five-twelfths {
+    width: 41.666%;
+  }
+  .lg-six-twelfths {
+    width: 50%;
+  }
+  .lg-seven-twelfths {
+    width: 58.333%;
+  }
+  .lg-eight-twelfths {
+    width: 66.666%;
+  }
+  .lg-nine-twelfths {
+    width: 75%;
+  }
+  .lg-ten-twelfths {
+    width: 83.333%;
+  }
+  .lg-eleven-twelfths {
+    width: 91.666%;
+  }
 }
 form {
   max-width: 600px;

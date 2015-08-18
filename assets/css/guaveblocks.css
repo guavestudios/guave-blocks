@@ -147,41 +147,12 @@ table {
 /*
 	Standard text sizes
 */
+/*
+ * Chose the with of .container
+ */
 /**
  * Set the spacing between your grid items.
  */
-/**
- * At which point should lap and desk breakpoints kick in?
- */
-.container {
-  padding: 0 20px;
-}
-@media only screen and (min-width: 768px) {
-  .container {
-    padding: 0;
-    margin: 0 auto;
-    width: 720px;
-    max-width: inherit;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  .container {
-    width: 960px;
-  }
-}
-.row:before,
-.row:after {
-  content: "";
-  display: table;
-}
-.row:after {
-  clear: both;
-}
-@media only screen and (min-width: 768px) {
-  .row {
-    margin: 0 -3%;
-  }
-}
 .hidden {
   display: none;
 }
@@ -255,6 +226,19 @@ table {
   -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
   box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
 }
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .row {
+    margin: 0 -3%;
+  }
+}
 .shownavigation {
   float: right;
   cursor: pointer;
@@ -271,4 +255,10 @@ table {
 }
 .hidenavigation .fa {
   font-size: 2rem;
+}
+.demo-block {
+  border: 1px solid gray;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
 }

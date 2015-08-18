@@ -42,6 +42,14 @@
   .box-shadow(0px 2px 8px 0px rgba(50,50,50,0.08));
 }
 
+.row {
+  .micro-clearfix();
+
+  .responsive(@min-width-sm, {
+    margin: 0 -3%;
+  } );
+}
+
 .shownavigation {
   float: right;
   cursor: pointer;
@@ -61,4 +69,10 @@
   .fa {
     font-size: 2rem;
   }
+}
+.demo-block {
+  border: 1px solid gray;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
 }
