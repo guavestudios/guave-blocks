@@ -48,6 +48,9 @@ module.exports = function (grunt) {
     less: {
       // production config is also available
       development: {
+        options: {
+          compress: false
+        },
         files: {
           // compilation.css  :  source.less
           "assets/css/guaveblocks.css": "assets/less/guaveblocks.less",
