@@ -2,9 +2,9 @@
   margin: 3rem 0;
   text-align: center;
 
-  @media only screen and (min-width : 768px) {
+  .responsive(@min-width-sm, {
     padding: 0 3%;
-  }
+  } );
 
   &__button {
     &:extend(.button);

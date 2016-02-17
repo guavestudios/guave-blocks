@@ -2,10 +2,28 @@ body {
   .font-normal(@font-size-normal);
 }
 
+/*
+  Basic stylings
+*/
+strong {
+  .font-bold(@font-size-normal);
+}
+
+em {
+  font-style: italic;
+}
+
+/*
+  Images
+*/
 img {
   max-width: 100%;
   height: auto;
 }
+
+/*
+  Links
+*/
 
 a {
   text-decoration: none;
@@ -17,26 +35,32 @@ a {
   }
 }
 
+/*
+  Lists, paragraphs and blockquotes
+*/
+
 p,
 ul,
 ol {
   line-height: 1.5;
 }
 
-
-h1 {
-  .font-normal(@font-sizes-h1);
+/*
+  Headings
+*/
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.25;
-  margin-bottom: 1.5rem;
 
   .responsive(@min-width-sm, {
     line-height: 1.5;
   } );
+}
 
-  .responsive(@min-width-lg, {
-    line-height: 1.25;
-    margin-bottom: 5rem;
-  } );
+h1 {
+  .font-normal(@font-sizes-h1);
 }
 
 h2 {
@@ -46,3 +70,16 @@ h2 {
 h3 {
   .font-normal(@font-sizes-h3);
 }
+
+h4 {
+  .font-normal(@font-sizes-h4);
+}
+
+table {
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
+

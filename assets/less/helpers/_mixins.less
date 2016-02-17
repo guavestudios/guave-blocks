@@ -16,15 +16,21 @@
   }
 }
 
+.font-size-loop(@counter, @list) when (@counter > 0) {
+  .font-size-loop((@counter - 1), @list);
+  .responsive(extract(@font-breakpoints, @counter), {
+    font-size: extract(@list, @counter+1);
+  } );
+}
+
 .font-size(@list: @font-size-normal) {
   font-size: extract(@list, 1);
 
-  .responsive(@min-width-sm, {
-    font-size: extract(@list, 2);
-  } );
-  .responsive(@min-width-md, {
-    font-size: extract(@list, 3);
-  } );
+  .font-size-loop(length(@font-breakpoints), @list);
+}
+
+.to-rem(@attr, @value: 16px) {
+  @{attr}: unit(unit(@value) / 16, rem);
 }
 
 .font-normal(@list: @font-size-normal) {
@@ -38,7 +44,7 @@
 
 .font-bold(@list: @font-size-normal) {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   .font-size(@list);

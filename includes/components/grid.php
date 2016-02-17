@@ -1,11 +1,11 @@
 <section class="container" role="main">
   <div class="grid">
-    <div class="grid__item sm-one-half">
+    <div class="grid__item sm-one-half md-two-thirds">
       <p class="demo-block">
         .sm-one-half
       </p>
     </div>
-    <div class="grid__item sm-one-half">
+    <div class="grid__item sm-one-half md-one-third">
       <p class="demo-block">
         .sm-one-half
       </p>

@@ -31,6 +31,7 @@
   padding: 0;
   margin-left: 0px - @gutter;
   margin-right: 0px - @gutter;
+  .micro-clearfix();
 
   &__item {
     float: left;
@@ -48,120 +49,116 @@
 
 .device-type(@namespace: ~"") {
   /**
-       * Whole
-       */
+     * Whole
+     */
   .@{namespace}one-whole {
-    width:100%;
+    width: 100%;
   }
 
   /**
    * Halves
    */
   .@{namespace}one-half {
-    width:50%;
+    width: 50%;
   }
-
 
   /**
    * Thirds
    */
   .@{namespace}one-third {
-    width:33.333%;
+    width: 33.333%;
   }
 
   .@{namespace}two-thirds {
-    width:66.666%;
+    width: 66.666%;
   }
-
 
   /**
    * Quarters
    */
   .@{namespace}one-quarter {
-    width:25%;
+    width: 25%;
   }
 
   .@{namespace}two-quarters {
-    width:50%;
+    width: 50%;
   }
 
   .@{namespace}three-quarters {
-    width:75%;
+    width: 75%;
   }
-
 
   /**
    * Fifths
    */
   .@{namespace}one-fifth {
-    width:20%;
+    width: 20%;
   }
 
   .@{namespace}two-fifths {
-    width:40%;
+    width: 40%;
   }
 
   .@{namespace}three-fifths {
-    width:60%;
+    width: 60%;
   }
 
   .@{namespace}four-fifths {
-    width:80%;
+    width: 80%;
   }
-
 
   /**
    * Sixths
    */
   .@{namespace}one-sixth {
-    width:16.666%;
+    width: 16.666%;
   }
 
   .@{namespace}two-sixths {
-    width:33.333%;
+    width: 33.333%;
   }
 
   .@{namespace}three-sixths {
-    width:50%;
+    width: 50%;
   }
 
   .@{namespace}four-sixths {
-    width:66.666%;
-  }
-  .@{namespace}five-sixths {
-    width:83.333%;
+    width: 66.666%;
   }
 
+  .@{namespace}five-sixths {
+    width: 83.333%;
+  }
 
   /**
    * Eighths
    */
   .@{namespace}one-eighth {
-    width:12.5%;
+    width: 12.5%;
   }
 
   .@{namespace}two-eighths {
-    width:25%;
+    width: 25%;
   }
 
   .@{namespace}three-eighths {
-    width:37.5%;
+    width: 37.5%;
   }
 
   .@{namespace}four-eighths {
-    width:50%;
+    width: 50%;
   }
 
   .@{namespace}five-eighths {
-    width:62.5%;
+    width: 62.5%;
   }
 
   .@{namespace}six-eighths {
-    width:75%;
+    width: 75%;
   }
 
   .@{namespace}seven-eighths {
-    width:87.5%;
+    width: 87.5%;
   }
 
   /**
@@ -249,17 +246,16 @@
   .@{namespace}eleven-twelfths {
     width: 91.666%;
   }
-
 }
 
-@media only screen and (min-width: @min-width-sm){
+.responsive(@min-width-sm, {
   .device-type(~"sm-");
-}
+} );
 
-@media only screen and (min-width: @min-width-md){
+.responsive(@min-width-md, {
   .device-type(~"md-");
-}
+} );
 
-@media only screen and (min-width: @min-width-lg){
+.responsive(@min-width-lg, {
   .device-type(~"lg-");
-}
+} );
