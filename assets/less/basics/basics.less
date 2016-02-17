@@ -1,24 +1,24 @@
 body {
-  .font-normal(@font-size-normal);
+	.font-normal(@font-size-normal);
 }
 
 /*
   Basic stylings
 */
 strong {
-  .font-bold(@font-size-normal);
+	.font-bold(@font-size-normal);
 }
 
 em {
-  font-style: italic;
+	font-style: italic;
 }
 
 /*
   Images
 */
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /*
@@ -26,13 +26,13 @@ img {
 */
 
 a {
-  text-decoration: none;
-  color: @link-color;
-  .transition(color 0.4s ease);
+	text-decoration: none;
+	color: @link-color;
+	.transition(color 0.4s ease);
 
-  &:hover {
-    color: @link-hover-color;
-  }
+	&:hover {
+		color: @link-hover-color;
+	}
 }
 
 /*
@@ -42,7 +42,7 @@ a {
 p,
 ul,
 ol {
-  line-height: 1.5;
+	line-height: 1.5;
 }
 
 /*
@@ -52,34 +52,34 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.25;
+	line-height: 1.25;
 
-  .responsive(@min-width-sm, {
-    line-height: 1.5;
-  } );
+	.responsive(@min-width-sm, {
+		line-height: 1.5;
+	});
 }
 
 h1 {
-  .font-normal(@font-sizes-h1);
+	.font-normal(@font-sizes-h1);
 }
 
 h2 {
-  .font-normal(@font-sizes-h2);
+	.font-normal(@font-sizes-h2);
 }
 
 h3 {
-  .font-normal(@font-sizes-h3);
+	.font-normal(@font-sizes-h3);
 }
 
 h4 {
-  .font-normal(@font-sizes-h4);
+	.font-normal(@font-sizes-h4);
 }
 
 table {
-  text-align: left;
+	text-align: left;
 }
 
 th {
-  text-align: left;
+	text-align: left;
 }
 
