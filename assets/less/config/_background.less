@@ -1,0 +1,31 @@
+@background-min-width-sm-sm: 0px;
+
+@background-max-width-sm-sm: @background-min-width-sm - 1;
+
+@background-min-width-sm: @min-width-sm;
+
+@background-max-width-sm: @background-min-width-md - 1;
+
+@background-min-width-md: @min-width-md;
+
+@background-max-width-md: @background-min-width-lg - 1;
+
+@background-min-width-lg: @min-width-lg;
+
+@background-max-width-lg: 10000px;
+
+/* In order for the background-mixin to work properly, there have to be exactly twice as many background-breakpoints as
+ * endings for the background-images. For each background-image-breakpoint there has to be a lower and an upper limit.
+ */
+@background-breakpoints: @background-min-width-sm-sm, @background-max-width-sm-sm, @background-min-width-sm, @background-max-width-sm, @background-min-width-md, @background-max-width-md, @background-min-width-lg, @background-max-width-lg;
+
+/* Endings are dynamically added onto the passed background-url in the mixin */
+@background-min-width-sm-sm-ending: "150x150";
+
+@background-min-width-sm-ending: "500x500";
+
+@background-min-width-md-ending: "1000x1000";
+
+@background-min-width-lg-ending: "1500x1500";
+
+@bg-endings: @background-min-width-sm-sm-ending, @background-min-width-sm-ending, @background-min-width-md-ending, @background-min-width-lg-ending;

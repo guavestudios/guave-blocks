@@ -188,6 +188,9 @@
           <figcaption>Here is a caption for this image.</figcaption>
         </figure>
       </section>
+			<div class="grid__item sm-one-whole background-img">
+				<h3>Div with responsive background-image</h3>
+			</div>
     </div>
   </div>
 </section>

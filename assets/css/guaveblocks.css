@@ -390,6 +390,13 @@ th {
 /**
  * Set the spacing between your grid items and the spacing for the .container on mobile
  */
+/* In order for the background-mixin to work properly, there have to be exactly twice as many background-breakpoints as
+ * endings for the background-images. For each background-image-breakpoint there has to be a lower and an upper limit.
+ */
+/* Endings are dynamically added onto the passed background-url in the mixin */
+/*
+ * Pass the file-ending with a trailing dot like so: '.jpg'
+ */
 .hidden {
   display: none;
 }
@@ -402,7 +409,7 @@ th {
   }
 }
 .error {
-  color: #e53935;
+  color: #E53935;
 }
 .clearfix:before,
 .clearfix:after {
@@ -455,7 +462,7 @@ th {
   }
 }
 .guaveblocks__link:hover {
-  background: #cddc39;
+  background: #CDDC39;
   color: #000000;
 }
 .fixedheader {
@@ -503,4 +510,46 @@ th {
   display: block;
   margin-bottom: 1em;
   padding: 1em;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .background-img {
+    background: #fff url("http://placehold.it/150x150") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+  .background-img {
+    background: #fff url("http://placehold.it/500x500") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .background-img {
+    background: #fff url("http://placehold.it/500x500") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .background-img {
+    background: #fff url("http://placehold.it/1000x1000") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1099px) {
+  .background-img {
+    background: #fff url("http://placehold.it/1000x1000") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1099px) and (-webkit-min-device-pixel-ratio: 2) {
+  .background-img {
+    background: #fff url("http://placehold.it/1500x1500") no-repeat center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 10000px) {
+  .background-img {
+    background: #fff url("http://placehold.it/1500x1500") no-repeat center center;
+    background-size: cover;
+  }
 }

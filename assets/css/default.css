@@ -387,6 +387,13 @@ th {
 /**
  * Set the spacing between your grid items and the spacing for the .container on mobile
  */
+/* In order for the background-mixin to work properly, there have to be exactly twice as many background-breakpoints as
+ * endings for the background-images. For each background-image-breakpoint there has to be a lower and an upper limit.
+ */
+/* Endings are dynamically added onto the passed background-url in the mixin */
+/*
+ * Pass the file-ending with a trailing dot like so: '.jpg'
+ */
 .hidden {
   display: none;
 }
@@ -399,7 +406,7 @@ th {
   }
 }
 .error {
-  color: #e53935;
+  color: #E53935;
 }
 .clearfix:before,
 .clearfix:after {
@@ -480,7 +487,7 @@ a {
   transition: color 0.4s ease;
 }
 a:hover {
-  color: #cddc39;
+  color: #CDDC39;
 }
 /*
   Lists, paragraphs and blockquotes
@@ -1401,7 +1408,7 @@ form {
 .formgroup__input--error input[type="search"],
 .formgroup__input--error input[type="url"],
 .formgroup__input--error input[type="text"] {
-  background: #e53935;
+  background: #E53935;
   color: #ffffff;
 }
 .formgroup__submit button {
@@ -1417,7 +1424,7 @@ form {
   margin-top: 0.4375rem;
 }
 .formgroup__error {
-  color: #e53935;
+  color: #E53935;
   display: none;
 }
 @media only screen and (min-width: 768px) {
@@ -1468,7 +1475,7 @@ form {
 }
 .button:hover,
 .calltoaction__button:hover {
-  background-color: #cddc39;
+  background-color: #CDDC39;
   color: #ffffff;
 }
 .imagetext {
