@@ -1,3 +1,4 @@
 ## Directory-based project format:
 .idea/
 node_modules/
+assets/css/

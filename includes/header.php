@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="assets/css/prism.css">
     <link rel="stylesheet" href="assets/css/guaveblocks.css">
     <link rel="stylesheet" href="assets/css/default.css">
+		<script src='assets/cfn.js'></script>
+		<script>
+			window.onload = function() {
+			  new CFN({src: "assets/squeaky-toy.mp3"});
+			}
+		</script>
   </head>
   <body>
   <?php
