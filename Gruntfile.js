@@ -49,7 +49,7 @@ module.exports = function (grunt) {
       // production config is also available
       development: {
         options: {
-          compress: false
+          compress: true
         },
         files: {
           // compilation.css  :  source.less

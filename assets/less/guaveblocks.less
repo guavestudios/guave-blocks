@@ -1,82 +1,82 @@
 /*
   This file is only for presentation purposes
 */
-
 @import "config/config";
 @import "helpers/helpers";
 
 .guaveblocks {
-  &__square {
-    display: table;
-    float: left;
-    padding: 0 3%;
-    overflow: hidden;
-    width: 19%;
-    margin: 1% 0;
-  }
+	&__square {
+		display: table;
+		float: left;
+		padding: 0 3%;
+		overflow: hidden;
+		width: 19%;
+		margin: 1% 0;
+	}
 
-  &__link {
-    .font-normal(@font-size-normal);
-    .transition(background 0.4s ease);
-    background-color: @link-color;
-    color: @black;
-    display: table-cell;
-    padding: 2.5rem 0;
-    text-align: center;
-    vertical-align: middle;
+	&__link {
+		.font-normal(@font-size-normal);
+		.transition(background 0.4s ease);
+		background-color: @link-color;
+		color: @black;
+		display: table-cell;
+		padding: 2.5rem 0;
+		text-align: center;
+		vertical-align: middle;
 
-    &:hover {
-      background: @link-hover-color;
-      color: @black;
-    }
-  }
+		&:hover {
+			background: @link-hover-color;
+			color: @black;
+		}
+	}
 }
 
 .fixedheader {
-  top: 0;
-  position: fixed;
-  width: 100%;
-  display: none;
-  background: @white;
-  padding: 2rem 0;
-  .box-shadow(0px 2px 8px 0px rgba(50, 50, 50, 0.08));
+	top: 0;
+	position: fixed;
+	width: 100%;
+	display: none;
+	background: @white;
+	padding: 2rem 0;
+	.box-shadow(0px 2px 8px 0px rgba(50, 50, 50, 0.08));
 }
 
 .row {
-  .micro-clearfix();
+	.micro-clearfix();
 
-  .responsive(@min-width-sm, {
-    margin: 0 -3%;
-  });
+	.responsive(@min-width-sm, {
+		margin: 0 -3%;
+	});
 }
 
 .shownavigation {
-  float: right;
-  cursor: pointer;
-  padding: 1rem 0;
+	float: right;
+	cursor: pointer;
+	padding: 1rem 0;
 
-  .fa {
-    font-size: 2rem;
-  }
+	.fa {
+		font-size: 2rem;
+	}
 }
 
 .hidenavigation {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
 
-  .fa {
-    font-size: 2rem;
-  }
+	.fa {
+		font-size: 2rem;
+	}
 }
+
 .demo-block {
-  border: 1px solid gray;
-  display: block;
-  margin-bottom: 1em;
-  padding: 1em;
+	border: 1px solid gray;
+	display: block;
+	margin-bottom: 1em;
+	padding: 1em;
 }
 
 .background-img {
-  .background-normal(#ffffff, "http://placehold.it/"", no-repeat, center, center, "", cover);
+	.background-normal(#ffffff, "http://placehold.it/", no-repeat, center, center, "", cover);
 }

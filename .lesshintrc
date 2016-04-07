@@ -1,5 +1,6 @@
 {
     "fileExtensions": [".less"],
+    "excludedFiles": ["mixins.less"],
     "attributeQuotes": {
       "enabled": true,
       "style": "double"

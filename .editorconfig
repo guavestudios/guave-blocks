@@ -17,16 +17,22 @@ indent_size = 4
 [*.php]
 indent_style = tab
 
+# Tab indentation (no size specified)
 [*.twig]
 indent_style = tab
 
 # Tab indentation (no size specified)
-[*.js]
+[assets/js/**.js]
 indent_style = tab
 
 # Tab indentation (no size specified)
-[*.less]
+[assets/less/*.less]
 indent_style = tab
+
+# Tab indentation (no size specified)
+[*.html5]
+indent_style = tab
+
 
 # Matches the exact files either package.json or .travis.yml
 [{package.json,.travis.yml}]

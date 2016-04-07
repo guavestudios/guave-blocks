@@ -1,131 +1,131 @@
 .responsive(@min-width; @rules) {
-  @media only screen and (min-width: @min-width) {
-    @rules();
-  }
+	@media only screen and (min-width: @min-width) {
+		@rules();
+	}
 }
 
 .tablet-portrait(@min-width; @rules) {
-  @media only screen and (min-width: @min-width) and (orientation: portrait) {
-    @rules();
-  }
+	@media only screen and (min-width: @min-width) and (orientation: portrait) {
+		@rules();
+	}
 }
 
 .tablet-landscape(@min-width; @rules) {
-  @media only screen and (min-width: @min-width) and (orientation: landscape) {
-    @rules();
-  }
+	@media only screen and (min-width: @min-width) and (orientation: landscape) {
+		@rules();
+	}
 }
 
 .font-size-loop(@counter, @list) when (@counter > 0) {
-  .font-size-loop((@counter - 1), @list);
-  .responsive(extract(@font-breakpoints, @counter), {
-    font-size: extract(@list, @counter+1);
-  });
+	.font-size-loop((@counter - 1), @list);
+	.responsive(extract(@font-breakpoints, @counter), {
+		font-size: extract(@list, @counter+1);
+	});
 }
 
 .font-size(@list: @font-size-normal) {
-  font-size: extract(@list, 1);
+	font-size: extract(@list, 1);
 
-  .font-size-loop(length(@font-breakpoints), @list);
+	.font-size-loop(length(@font-breakpoints), @list);
 }
 
 .to-rem(@attr, @value: 16px) {
-  @{attr}: unit(unit(@value) / 16, rem);
+	@{attr}: unit(unit(@value) / 16, rem);
 }
 
 .font-normal(@list: @font-size-normal) {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: normal;
-  .font-size(@list);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	.font-size(@list);
 }
 
 .font-bold(@list: @font-size-normal) {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  .font-size(@list);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	.font-size(@list);
 }
 
 /*
  * Pass the file-ending with a trailing dot like so: '.jpg'
  */
 .background-normal(@bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-file-ending, @bg-size: cover) {
-  @counter: length(@background-breakpoints);
-  .background-loop(@counter, extract(@background-breakpoints, (@counter - 1)), extract(@background-breakpoints, @counter), @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos,  @bg-file-ending, @bg-size);
+	@counter: length(@background-breakpoints);
+	.background-loop(@counter, extract(@background-breakpoints, (@counter - 1)), extract(@background-breakpoints, @counter), @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos,  @bg-file-ending, @bg-size);
 }
 
 .background-loop(@counter, @min-width, @max-width, @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-file-ending, @bg-size) when (@counter > 0) {
-  .background-loop((@counter - 2), extract(@background-breakpoints, (@counter - 3)), extract(@background-breakpoints, (@counter - 2)), @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-file-ending, @bg-size);
+	.background-loop((@counter - 2), extract(@background-breakpoints, (@counter - 3)), extract(@background-breakpoints, (@counter - 2)), @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-file-ending, @bg-size);
 
-  @media only screen and (min-width: @min-width) and (max-width: @max-width) {
-    @background-ending: extract(@bg-endings, @counter/2);
-    background: @bg-color url("@{bg-url}@{background-ending}@{bg-file-ending}") @bg-repeat @bg-att @bg-pos;
-    background-size: @bg-size;
-  }
-  @media only screen and (min-width: @min-width) and (max-width: @max-width) and (-webkit-min-device-pixel-ratio: 2) {
-    .generate-hires-background(@counter, @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-size);
-  }
+	@media only screen and (min-width: @min-width) and (max-width: @max-width) {
+		@background-ending: extract(@bg-endings, @counter/2);
+		background: @bg-color url("@{bg-url}@{background-ending}@{bg-file-ending}") @bg-repeat @bg-att @bg-pos;
+		background-size: @bg-size;
+	}
+
+	@media only screen and (min-width: @min-width) and (max-width: @max-width) and (-webkit-min-device-pixel-ratio: 2) {
+		.generate-hires-background(@counter, @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-size);
+	}
 }
 
 .generate-hires-background(@counter, @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-size) when (@counter/2 + 1 <= length(@background-breakpoints)/2) {
-  @background-ending: extract(@bg-endings, (@counter/2) + 1);
-  background: @bg-color url("@{bg-url}@{background-ending}@{bg-file-ending}") @bg-repeat @bg-att @bg-pos;
-  background-size: @bg-size;
+	@background-ending: extract(@bg-endings, (@counter/2) + 1);
+	background: @bg-color url("@{bg-url}@{background-ending}@{bg-file-ending}") @bg-repeat @bg-att @bg-pos;
+	background-size: @bg-size;
 }
 
 .transition(@transition: all 0.4 ease) {
-  -webkit-transition: @transition;
-  -moz-transition: @transition;
-  -o-transition: @transition;
-  -ms-transition: @transition;
-  transition: @transition;
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	-ms-transition: @transition;
+	transition: @transition;
 }
 
 .transform(@transform) {
-  -webkit-transform: @transform;
-  -moz-transform: @transform;
-  -o-transform: @transform;
-  -ms-transform: @transform;
-  transform: @transform;
+	-webkit-transform: @transform;
+	-moz-transform: @transform;
+	-o-transform: @transform;
+	-ms-transform: @transform;
+	transform: @transform;
 }
 
 .vertical-align() {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .horizontal-align() {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .border-radius (@border-radius: 0px) {
-  -webkit-border-radius: @border-radius;
-  -moz-border-radius: @border-radius;
-  border-radius: @border-radius;
+	-webkit-border-radius: @border-radius;
+	-moz-border-radius: @border-radius;
+	border-radius: @border-radius;
 }
 
 .box-shadow (@shadow) {
-  -webkit-box-shadow: @shadow;
-  box-shadow: @shadow;
+	-webkit-box-shadow: @shadow;
+	box-shadow: @shadow;
 }
 
 .micro-clearfix() {
-  &:before, &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
 }
