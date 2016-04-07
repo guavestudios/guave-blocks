@@ -20,7 +20,7 @@
   .font-size-loop((@counter - 1), @list);
   .responsive(extract(@font-breakpoints, @counter), {
     font-size: extract(@list, @counter+1);
-  } );
+  });
 }
 
 .font-size(@list: @font-size-normal) {

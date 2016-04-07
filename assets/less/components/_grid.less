@@ -14,15 +14,15 @@
     padding: 0;
     margin: 0 auto;
     width: @container-width-sm;
-  } );
+  });
 
   .responsive(@min-width-md, {
     width: @container-width-md;
-  } );
+  });
 
   .responsive(@min-width-lg, {
     width: @container-width-lg;
-  } );
+  });
 }
 
 .grid {
@@ -220,7 +220,7 @@
   }
 
   .@{namespace}five-twelfths {
-    width: 41.666%
+    width: 41.666%;
   }
 
   .@{namespace}six-twelfths {
@@ -250,12 +250,12 @@
 
 .responsive(@min-width-sm, {
   .device-type(~"sm-");
-} );
+});
 
 .responsive(@min-width-md, {
   .device-type(~"md-");
-} );
+});
 
 .responsive(@min-width-lg, {
   .device-type(~"lg-");
-} );
+});

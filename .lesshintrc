@@ -1,0 +1,126 @@
+{
+    "fileExtensions": [".less"],
+    "attributeQuotes": {
+      "enabled": true,
+      "style": "double"
+    },
+    "borderZero": {
+        "enabled": true,
+        "style": "none"
+    },
+    "comment": {
+        "enabled": false
+    },
+    "decimalZero": {
+        "enabled": true,
+        "style": "leading"
+    },
+    "depthLevel": {
+        "enabled": false,
+        "depth": 3
+    },
+    "duplicateProperty": {
+        "enabled": true
+    },
+    "emptyRule": {
+        "enabled": true
+    },
+    "finalNewline": {
+        "enabled": true
+    },
+    "hexLength": {
+        "enabled": true,
+        "style": "long"
+    },
+    "hexNotation": {
+        "enabled": true,
+        "style": "lowercase"
+    },
+    "hexValidation": {
+        "enabled": true
+    },
+    "idSelector": {
+        "enabled": false
+    },
+    "importantRule": {
+        "enabled": true
+    },
+    "importPath": {
+        "enabled": false,
+        "leadingUnderscore": true
+    },
+    "propertyOrdering": {
+        "enabled": false
+    },
+    "qualifyingElement": {
+        "allowWithAttribute": true,
+        "allowWithClass": true,
+        "allowWithId": true
+    },
+    "selectorNaming": {
+        "disallowUppercase": true,
+        "disallowUnderscore": true,
+        "disallowDash": true,
+        "exclude": []
+    },
+    "singleLinePerProperty": {
+        "enabled": true
+    },
+    "singleLinePerSelector": {
+        "enabled": true
+    },
+    "spaceAfterPropertyColon": {
+        "enabled": true,
+        "style": "one_space"
+    },
+    "spaceAfterPropertyName": {
+        "enabled": true,
+        "style": "no_space"
+    },
+    "spaceAfterPropertyValue": {
+        "enabled": true,
+        "style": "no_space"
+    },
+    "spaceAroundComma": {
+        "enabled": true,
+        "style": "after"
+    },
+    /* As of 1.3.1 this is returning false negatives when it comes across
+     * negative numbers in calculations or shorthand.
+     *
+     * https://github.com/lesshint/lesshint/issues/129
+     */
+    "spaceAroundOperator": {
+        "enabled": true, // disabled until lesshint#129 fixed
+        "style": "both"
+    },
+    "spaceBeforeBrace": {
+        "enabled": true,
+        "style": "one_space"
+    },
+    "spaceBetweenParens": {
+        "enabled": true,
+        "style": "no_space"
+    },
+    "stringQuotes": {
+        "enabled": true,
+        "style": "double"
+    },
+    "trailingSemicolon": {
+        "enabled": true
+    },
+    "trailingWhitespace": {
+        "enabled": false
+    },
+    "urlFormat": { // we want both
+        "enabled": true,
+        "style": "relative"
+    },
+    "urlQuotes": {
+        "enabled": true
+    },
+    "zeroUnit": {
+        "enabled": true,
+        "style": "no_unit"
+    }
+}
