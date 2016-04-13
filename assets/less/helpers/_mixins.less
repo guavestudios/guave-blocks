@@ -120,6 +120,15 @@
 	box-shadow: @shadow;
 }
 
+.hyphenate() {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
 .micro-clearfix() {
 	&:before, &:after {
 		content: "";
