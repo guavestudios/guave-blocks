@@ -36,43 +36,30 @@ a {
 }
 
 /*
-  Lists, paragraphs and blockquotes
-*/
-
-p,
-ul,
-ol {
-	line-height: 1.5;
-}
-
-/*
   Headings
 */
-h1,
-h2,
-h3,
-h4 {
-	line-height: 1.25;
-
-	.responsive(@min-width-sm, {
-		line-height: 1.5;
-	});
-}
-
 h1 {
-	.font-normal(@font-sizes-h1);
+	.font-bold(@font-sizes-h1, @line-height-title);
 }
 
 h2 {
-	.font-normal(@font-sizes-h2);
+	.font-bold(@font-sizes-h2, @line-height-title);
 }
 
 h3 {
-	.font-normal(@font-sizes-h3);
+	.font-bold(@font-sizes-h3, @line-height-title);
 }
 
 h4 {
-	.font-normal(@font-sizes-h4);
+	.font-bold(@font-sizes-h4, @line-height-title);
+}
+
+h5 {
+	.font-bold(@font-sizes-h5, @line-height-title);
+}
+
+h6 {
+	.font-bold(@font-sizes-h6, @line-height-title);
 }
 
 table {
