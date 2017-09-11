@@ -1,32 +1,25 @@
 /*
   This file is only for presentation purposes
 */
-@import "config/config";
-@import "helpers/helpers";
+@import "config/all";
+@import "helpers/all";
 
 .guaveblocks {
-	&__square {
-		display: table;
-		float: left;
-		padding: 0 3%;
-		overflow: hidden;
-		width: 19%;
-		margin: 1% 0;
-	}
+	.spacing-top-bottom(margin, @spacing-xs);
 
 	&__link {
-		.font-normal(@font-size-normal);
-		.transition(background 0.4s ease);
 		background-color: @link-color;
-		color: @black;
-		display: table-cell;
+		color: @white;
+		display: block;
 		padding: 2.5rem 0;
 		text-align: center;
 		vertical-align: middle;
+		.font-normal(@font-size-normal);
+		.transition(background 0.4s ease);
 
 		&:hover {
 			background: @link-hover-color;
-			color: @black;
+			color: @white;
 		}
 	}
 }
@@ -38,15 +31,8 @@
 	display: none;
 	background: @white;
 	padding: 2rem 0;
+	z-index: 10;
 	.box-shadow(0px 2px 8px 0px rgba(50, 50, 50, 0.08));
-}
-
-.row {
-	.micro-clearfix();
-
-	.responsive(@min-width-sm, {
-		margin: 0 -3%;
-	});
 }
 
 .shownavigation {
@@ -75,8 +61,5 @@
 	display: block;
 	margin-bottom: 1em;
 	padding: 1em;
-}
-
-.background-img {
-	.background-normal(#ffffff, "http://placehold.it/", no-repeat, center, center, "", cover);
+	text-align: center;
 }

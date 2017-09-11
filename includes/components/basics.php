@@ -1,26 +1,26 @@
 <section class="container" role="main">
-  <div class="grid">
-    <div class="grid__item sm-one-whole">
+  <div class="row">
+    <div class="col-sm-12">
       <header>
         <h1>Testing display of HTML elements</h1>
       </header>
     </div>
-    <div class="grid__item sm-one-whole">
+    <div class="col-sm-12">
       <header>
         <h2>This is 2nd level heading</h2>
       </header>
     </div>
-    <div class="grid__item sm-one-whole">
+    <div class="col-sm-12">
       <header>
         <h3>h3 title</h3>
       </header>
     </div>
-    <div class="grid__item sm-one-whole">
+    <div class="col-sm-12">
       <header>
         <h4>h4 title</h4>
       </header>
     </div>
-    <div class="grid__item sm-one-whole">
+    <div class="col-sm-12">
       <section>
         <h3>
           Paragraphs
@@ -188,7 +188,7 @@
           <figcaption>Here is a caption for this image.</figcaption>
         </figure>
       </section>
-			<div class="grid__item sm-one-whole background-img">
+			<div class="col-sm-12 background-img">
 				<h3>Div with responsive background-image</h3>
 			</div>
     </div>

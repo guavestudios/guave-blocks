@@ -1,0 +1,101 @@
+.spacing-loop(@counter, @list, @spacing-type) when (@counter > 0) {
+	.spacing-loop((@counter - 1), @list, @spacing-type);
+
+	.responsive(extract(@breakpoints, @counter), {
+		@{spacing-type}: extract(@list, @counter + 1);
+	});
+}
+
+.spacing(@spacing-type, @list: @spacing-xs) {
+	@{spacing-type}: extract(@list, 1);
+
+	.spacing-loop(length(@breakpoints), @list, @spacing-type);
+}
+
+.spacing-loop-top-bottom(@counter, @list, @spacing-type) when (@counter > 0) {
+	.spacing-loop-top-bottom((@counter - 1), @list, @spacing-type);
+
+	.responsive(extract(@breakpoints, @counter), {
+		@{spacing-type}-top: extract(@list, @counter + 1);
+		@{spacing-type}-bottom: extract(@list, @counter + 1);
+	});
+}
+
+.spacing-top-bottom(@spacing-type, @list: @spacing-xs) {
+	@{spacing-type}-top: extract(@list, 1);
+	@{spacing-type}-bottom: extract(@list, 1);
+
+	.spacing-loop-top-bottom(length(@breakpoints), @list, @spacing-type);
+}
+
+.spacing-loop-top(@counter, @list, @spacing-type) when (@counter > 0) {
+	.spacing-loop-top((@counter - 1), @list, @spacing-type);
+
+	.responsive(extract(@breakpoints, @counter), {
+		@{spacing-type}-top: extract(@list, @counter + 1);
+	});
+}
+
+.spacing-top(@spacing-type, @list: @spacing-xs) {
+	@{spacing-type}-top: extract(@list, 1);
+
+	.spacing-loop-top(length(@breakpoints), @list, @spacing-type);
+}
+
+.spacing-loop-bottom(@counter, @list, @spacing-type) when (@counter > 0) {
+	.spacing-loop-bottom((@counter - 1), @list, @spacing-type);
+
+	.responsive(extract(@breakpoints, @counter), {
+		@{spacing-type}-bottom: extract(@list, @counter + 1);
+	});
+}
+
+.spacing-bottom(@spacing-type, @list: @spacing-xs) {
+	@{spacing-type}-bottom: extract(@list, 1);
+
+	.spacing-loop-bottom(length(@breakpoints), @list, @spacing-type);
+}
+
+.spacing-loop-left-right(@counter, @list, @spacing-type) when (@counter > 0) {
+	.spacing-loop-left-right((@counter - 1), @list, @spacing-type);
+
+	.responsive(extract(@breakpoints, @counter), {
+		@{spacing-type}-left: extract(@list, @counter + 1);
+		@{spacing-type}-right: extract(@list, @counter + 1);
+	});
+}
+
+.spacing-left-right(@spacing-type, @list: @spacing-xs) {
+	@{spacing-type}-left: extract(@list, 1);
+	@{spacing-type}-right: extract(@list, 1);
+
+	.spacing-loop-left-right(length(@breakpoints), @list, @spacing-type);
+}
+
+.spacing-loop-left(@counter, @list, @spacing-type) when (@counter > 0) {
+	.spacing-loop-left((@counter - 1), @list, @spacing-type);
+
+	.responsive(extract(@breakpoints, @counter), {
+		@{spacing-type}-left: extract(@list, @counter + 1);
+	});
+}
+
+.spacing-left-right(@spacing-type, @list: @spacing-xs) {
+	@{spacing-type}-left: extract(@list, 1);
+
+	.spacing-loop-left(length(@breakpoints), @list, @spacing-type);
+}
+
+.spacing-loop-right(@counter, @list, @spacing-type) when (@counter > 0) {
+	.spacing-loop-right((@counter - 1), @list, @spacing-type);
+
+	.responsive(extract(@breakpoints, @counter), {
+		@{spacing-type}-right: extract(@list, @counter + 1);
+	});
+}
+
+.spacing-right(@spacing-type, @list: @spacing-xs) {
+	@{spacing-type}-right: extract(@list, 1);
+
+	.spacing-loop-right(length(@breakpoints), @list, @spacing-type);
+}

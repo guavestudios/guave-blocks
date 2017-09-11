@@ -1,17 +1,17 @@
-.responsive(@min-width; @rules) {
-	@media only screen and (min-width: @min-width) {
+.responsive(@screen; @rules) {
+	@media only screen and (min-width: @screen) {
 		@rules();
 	}
 }
 
-.tablet-portrait(@min-width; @rules) {
-	@media only screen and (min-width: @min-width) and (orientation: portrait) {
+.tablet-portrait(@screen; @rules) {
+	@media only screen and (min-width: @screen) and (orientation: portrait) {
 		@rules();
 	}
 }
 
-.tablet-landscape(@min-width; @rules) {
-	@media only screen and (min-width: @min-width) and (orientation: landscape) {
+.tablet-landscape(@screen; @rules) {
+	@media only screen and (min-width: @screen) and (orientation: landscape) {
 		@rules();
 	}
 }
@@ -19,7 +19,7 @@
 .font-size-loop(@counter, @list) when (@counter > 0) {
 	.font-size-loop((@counter - 1), @list);
 
-	.responsive(extract(@font-breakpoints, @counter), {
+	.responsive(extract(@breakpoints, @counter), {
 		font-size: extract(@list, @counter+1);
 		line-height: extract(@line-height, @counter+1);
 	});
@@ -29,7 +29,7 @@
 	font-size: extract(@list, 1);
 	line-height: extract(@line-height, 1);
 
-	.font-size-loop(length(@font-breakpoints), @list);
+	.font-size-loop(length(@breakpoints), @list);
 }
 
 .to-rem(@attr, @value: 16px) {
@@ -52,34 +52,6 @@
 	.font-size(@list, @line-height);
 }
 
-/*
- * Pass the file-ending with a trailing dot like so: '.jpg'
- */
-.background-normal(@bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-file-ending, @bg-size: cover) {
-	@counter: length(@background-breakpoints);
-	.background-loop(@counter, extract(@background-breakpoints, (@counter - 1)), extract(@background-breakpoints, @counter), @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos,  @bg-file-ending, @bg-size);
-}
-
-.background-loop(@counter, @min-width, @max-width, @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-file-ending, @bg-size) when (@counter > 0) {
-	.background-loop((@counter - 2), extract(@background-breakpoints, (@counter - 3)), extract(@background-breakpoints, (@counter - 2)), @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-file-ending, @bg-size);
-
-	@media only screen and (min-width: @min-width) and (max-width: @max-width) {
-		@background-ending: extract(@bg-endings, @counter/2);
-		background: @bg-color url("@{bg-url}@{background-ending}@{bg-file-ending}") @bg-repeat @bg-att @bg-pos;
-		background-size: @bg-size;
-	}
-
-	@media only screen and (min-width: @min-width) and (max-width: @max-width) and (-webkit-min-device-pixel-ratio: 2) {
-		.generate-hires-background(@counter, @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-size);
-	}
-}
-
-.generate-hires-background(@counter, @bg-color, @bg-url, @bg-repeat, @bg-att, @bg-pos, @bg-size) when (@counter/2 + 1 <= length(@background-breakpoints)/2) {
-	@background-ending: extract(@bg-endings, (@counter/2) + 1);
-	background: @bg-color url("@{bg-url}@{background-ending}@{bg-file-ending}") @bg-repeat @bg-att @bg-pos;
-	background-size: @bg-size;
-}
-
 .transition(@transition: all 0.4 ease) {
 	-webkit-transition: @transition;
 	-moz-transition: @transition;
@@ -96,20 +68,26 @@
 	transform: @transform;
 }
 
-.vertical-align() {
-	position: absolute;
+.middle-align(@position: absolute) {
+	width: 100%;
+	position: @position;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	left: 50%;
+	.transform(~"translate(-50%, -50%)")
 }
 
-.horizontal-align() {
-	position: absolute;
+.vertical-align(@position: absolute) {
+	width: 100%;
+	position: @position;
+	top: 50%;
+	.transform(~"translateY(-50%)")
+}
+
+.horizontal-align(@position: absolute) {
+	width: 100%;
+	position: @position;
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
+	.transform(~"translateX(-50%)")
 }
 
 .border-radius (@border-radius: 0px) {
@@ -130,6 +108,17 @@
 	-ms-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+}
+
+.sr-only() {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0 , 0, 0);
+	border: none;
 }
 
 .micro-clearfix() {

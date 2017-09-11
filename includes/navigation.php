@@ -14,18 +14,18 @@
 </header>
 <header class="<?php echo $subPageClass;?>">
   <div class="container">
-    <div class="row">
-      <div class="guaveblocks">
-        <div class="guaveblocks__square">
+    <div class="guaveblocks">
+      <div class="row">
+        <div class="col-sm-3">
           <a class="guaveblocks__link" href="basics.php">Basics</a>
         </div>
-        <div class="guaveblocks__square">
+        <div class="col-sm-3">
           <a class="guaveblocks__link" href="grid.php">Grid</a>
         </div>
-        <div class="guaveblocks__square">
+        <div class="col-sm-3">
           <a class="guaveblocks__link" href="forms.php">Forms</a>
         </div>
-        <div class="guaveblocks__square">
+        <div class="col-sm-3">
           <a class="guaveblocks__link" href="textblocks.php">Textblocks</a>
         </div>
       </div>
